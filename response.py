@@ -23,8 +23,7 @@ def create_hwp(teamname, teammates, title, image_loc):
     base_words.append(("(실험 일시)", f"{formatted_date} {days_of_week[weekday]}"))
 
     model = ChatOpenAI(
-        model="gpt-4o", 
-        openai_api_key='sk-HQoGsRZM1VAWuEcgyxd7_uNxHfVhjuhyPt53CKzO6bT3BlbkFJjkhZ71fjcXfFe0SDIwOhAd_Dqqsnezcb2r4bzk9LkA',
+        model="gpt-4o",
         temperature=0.3,
         max_tokens=2056
     )
