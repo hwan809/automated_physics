@@ -1,0 +1,6 @@
+hwpapi
+datetime
+langchain_core
+langchain_openai
+PyQt5
+pyinstaller
