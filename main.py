@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 class ReportGenerator(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("물리 탐구 보고서 제작기")
+        self.setWindowTitle("물리학 실험 보고서 제작기")
         self.setGeometry(100, 100, 400, 400)
 
         self.layout = QVBoxLayout()
@@ -150,9 +150,13 @@ class ReportGenerator(QWidget):
         
         QMessageBox.warning(self, "보고서 생성 시작", "- 30초 정도 소요됩니다.\n- 한글 파일을 조작하지 마세요.\n -종료 창이 뜨면 '저장 안함' 을 선택하세요.")
         create_hwp(self.team_name, self.team_members, self.research_topic, self.file_name)
+        QMessageBox.warning(self, "제작 완료", "output 폴더를 확인하세요.")
 
+openai_api_key = ''
 
 if __name__ == "__main__":
+    openai_api_key = input('제공받은 API Key를 입력하세요: ')
+
     app = QApplication(sys.argv)
     window = ReportGenerator()
     window.show()
