@@ -149,7 +149,7 @@ class ReportGenerator(QWidget):
             return
         
         QMessageBox.warning(self, "보고서 생성 시작", "- 30초 정도 소요됩니다.\n- 한글 파일을 조작하지 마세요.\n -종료 창이 뜨면 '저장 안함' 을 선택하세요.")
-        create_hwp(self.team_name, self.team_members, self.research_topic, self.file_name)
+        create_hwp(self.team_name, self.team_members, self.research_topic, self.file_name, openai_api_key)
         QMessageBox.warning(self, "제작 완료", "output 폴더를 확인하세요.")
 
 openai_api_key = ''
